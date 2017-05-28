@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-An extended PDF copy can be downloaded from [here](https://docs.google.com/document/d/1_jQc-ZCjP8dU3cFGzg2hsiW05eeCWCk13qy0FaiXyxk/edit?usp=sharing).
+An extended PDF copy can be downloaded from **[here](https://docs.google.com/document/d/1_jQc-ZCjP8dU3cFGzg2hsiW05eeCWCk13qy0FaiXyxk/edit?usp=sharing)**.
 
 {% include base_path %}
 
