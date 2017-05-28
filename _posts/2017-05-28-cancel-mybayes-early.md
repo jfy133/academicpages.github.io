@@ -7,11 +7,11 @@ tags:
   - phylogenetics
 ---
 
-During my M.Sc. thesis I started to use the Bayesian phylogenetic MrBayes on clusters that do not make it feasible to keep open  a terminal window. This meant I had to use ‘batch mode’, meaning I could only follow the status of the MrBayes run through the log files.
+During my M.Sc. thesis I started to use the Bayesian phylogenetic MrBayes on clusters that do not make it feasible to keep open  a terminal window. This meant I had to use ‘[batch mode](http://mrbayes.sourceforge.net/wiki/index.php/FAQ_3.2)’, meaning I could only follow the status of the MrBayes run through the log files.
 
 One issue I found when using MrBayes is that it is quite slow, so when I found my MCMC trace reached stability very early on in the chain, I wanted to stop the chain early, requiring me to force cancel the run. This meant that the data was not loaded in the program and I could not run the ‘sump’ or ‘sumt’ commands in MrBayes.
 
-I googled how to do cancel a MrBayes run early and found a couple of links (such as here: and here). Although easy to do, neither explanations were particularly explicit in how finish the chain early and continue the analysis.
+I googled how to do cancel a MrBayes run early and found a couple of links (such as [here](https://www.biostars.org/p/139267/) and [here](https://sourceforge.net/p/mrbayes/mailman/mrbayes-users/thread/b392349a0811081442j4480854fqc462424a6381dd@mail.gmail.com/)). Although easy to do, neither explanations were particularly explicit in how finish the chain early and continue the analysis.
 
 This post will give a quick step by step guide with additional notes on how to cancel a run early and to finish the analyses.
 
@@ -21,7 +21,7 @@ This post will give a quick step by step guide with additional notes on how to c
 
 3) To the end of every ‘.t’ file, in a text editor or with the command line, append to a new line without an indentation the following:
 
-![Finishing the block](/images/2017-05-28_1.png)
+![Finishing the block](/images/2017-05-28_2.png)
 
 **Note**: If you want to ‘round off’ your number of steps in your chain, make sure you have the same numbers of entries in both .t and .p files. E.g. if you had already reached stability by 40,000,000 steps but you finished 40,000,125 - in all files delete lines below 40,000,000 and add ‘end;’ in the tree files.
 
