@@ -21,13 +21,13 @@ Work experience
   * Department of Archaeogenetics, MPI for the Science of Human History
   * Duties included: Data processing
 
-* Fall 2015: Student Research Assistant (HiWi)
+* 2014-2015: Student Research Assistant (HiWi)
   * AG Biogeologie (Prof. Dr. Bocherens), Universität Tübingen
   * Duties included: Data management, sample preparation, collagen extraction
 
 Skills
 ======
-* languages
+* Languages
   * English: Native
   * German: A2/B1 Level
 * IT
@@ -49,11 +49,11 @@ Talks
 
 Scholarships/Grant
 ======
-* 2014-2015 	German Academic Exchange Service / Deutscher Akademischer Austausch Dienst
+* 2014-2015: German Academic Exchange Service / Deutscher Akademischer Austausch Dienst
   * Studienstipendien für Graduierte aller wissenschaftlichen Fächer
   * Award: €7860
 
-* 2013-2014	Research Laboratory for Archaeology and the History of Art - University of Oxford [Declined]
+* 2013-2014: Research Laboratory for Archaeology and the History of Art - University of Oxford [Declined]
   * Edward Hall Memorial Fund
   * Award: £1000
 
@@ -64,6 +64,8 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Service and leadership
+Internships/Volunteering
 ======
-* Currently signed in to 43 different slack teams
+* March-April 2013: Bioinformatics Pipeline Testing Research Project - Eberhard-Karls Universität Tübingen
+* Jul-­Nov 2012	: Research Project into Survival of Collagen in Fossilised Bones – University of York
+* Apr–May 2011: Excavation Volunteer -  Landscape Research Centre/University of York
