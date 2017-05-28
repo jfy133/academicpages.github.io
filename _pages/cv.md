@@ -11,49 +11,59 @@ redirect_from:
 
 Education
 ======
-* B.S. in Github, Github University, 2012
-* M.S. in Jekyll, Github University, 2014
-* Ph.D in Version Control Theory, Github University, 2018 (expected)
+* B.S.c. in Bioarchaeology, University of York, 2013
+* M.S.c. in Naturwissenschafliches Archäologie, Eberhard-Karls Universiät Tübingen, 2015
+* Ph.D. in Archaeogenetics, Max-Planck-Institute für Menschheitsgeschichte, 2018/2019 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2015: Student Research Assistant (HiWi)
+  * Department of Archaeogenetics, MPI for the Science of Human History
+  * Duties included: Data processing
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
+* Fall 2015: Student Research Assistant (HiWi)
+  * AG Biogeologie (Prof. Dr. Bocherens), Universität Tübingen
+  * Duties included: Data management, sample preparation, collagen extraction
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* languages
+  * English: Native
+  * German: A2/B1 Level
+* IT
+  * OS: Linux (primary), OSX, Windows
+  * Programming: Bash, R, Python
+  * Collaborative tools: Google Drive, Slack, Owncloud, Dropbox
 
 Publications
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+
+Scholarships/Grant
+======
+* 2014-2015 	German Academic Exchange Service / Deutscher Akademischer Austausch Dienst
+  * Studienstipendien für Graduierte aller wissenschaftlichen Fächer
+  * Award: €7860
+
+* 2013-2014	Research Laboratory for Archaeology and the History of Art - University of Oxford [Declined]
+  * Edward Hall Memorial Fund
+  * Award: £1000
+
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
