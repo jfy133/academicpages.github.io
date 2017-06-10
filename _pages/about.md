@@ -14,6 +14,6 @@ I originally trained as an Archaeologist at the University of York, where I spec
 
 My current area of research is centered on the ancient DNA content of fossilised dental plaque from palaeolithic to recent archaeological skeletons. I am primarily exploring how we can analyse and [authenticate](http://www.jafy.eu/publication/2017-04-17-robust-framework-microbial-archaeology) the complex genetic makeup of this material through shotgun metagenomics.
 
-My previous research has been on Late Pleistocene woolly mammoth mitochondrial genomes, as well as testing collagen 'fingerprinting' methods (ZooMS) on burnt skeletal remains.
+Previously, I have worked on Late Pleistocene woolly mammoth mitochondrial genomes, as well as testing collagen 'fingerprinting' methods (ZooMS) on burnt skeletal remains.
 
 My MPI-SHH page can be found [here]("http://www.shh.mpg.de/employees/45083/25522")
