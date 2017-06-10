@@ -16,4 +16,4 @@ My current area of research is centered on the ancient DNA content of fossilised
 
 Previously, I have worked on Late Pleistocene woolly mammoth mitochondrial genomes, as well as testing collagen 'fingerprinting' methods (ZooMS) on burnt skeletal remains.
 
-My MPI-SHH page can be found [here]("http://www.shh.mpg.de/employees/45083/25522")
+My MPI-SHH page can be found [here](http://www.shh.mpg.de/employees/45083/25522)
