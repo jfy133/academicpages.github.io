@@ -8,7 +8,4 @@ date: 2017-03-08
 location: "Jena, Germany"
 ---
 
-Overview
-======
-
 This mini-workshop was given in March 2017 as an practical introduction on how to use SLURM on the MPI-SHH DAG computing infrastructure.
