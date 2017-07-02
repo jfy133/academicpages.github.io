@@ -13,29 +13,34 @@ An extended PDF copy can be downloaded from **[here](https://docs.google.com/doc
 
 Education
 ======
-* B.S.c. in Bioarchaeology, University of York, 2013
-* M.S.c. in Naturwissenschafliches Archäologie, Eberhard-Karls Universiät Tübingen, 2015
-* Ph.D. in Archaeogenetics, Max-Planck-Institute für Menschheitsgeschichte, 2018/2019 (expected)
+**2013** B.S.c. in Bioarchaeology, University of York
+**2015** M.S.c. in Naturwissenschafliches Archäologie, Eberhard-Karls Universiät Tübingen
+**2018/2019** (expected) Ph.D. in Archaeogenetics, Max-Planck-Institute für Menschheitsgeschichte
 
 Work experience
 ======
-* 2015: Student Research Assistant (HiWi)
-  * Department of Archaeogenetics, MPI for the Science of Human History
-  * Duties included: Data processing
+**2015** Student Research Assistant (HiWi)
+* Department of Archaeogenetics, MPI for the Science of Human History
+* Duties included: Data processing
 
-* 2014-2015: Student Research Assistant (HiWi)
-  * AG Biogeologie (Prof. Dr. Bocherens), Universität Tübingen
-  * Duties included: Data management, sample preparation, collagen extraction
+**2014-2015** Student Research Assistant (HiWi)
+* AG Biogeologie (Prof. Dr. Bocherens), Universität Tübingen
+* Duties included: Data management, sample preparation, collagen extraction
 
 Skills
 ======
-* Languages
-  * English: Native
-  * German: A2/B1 Level
-* IT
-  * OS: Linux (primary), OSX, Windows
-  * Programming: Bash, R, Python
-  * Collaborative tools: Google Drive, Slack, Owncloud, Dropbox
+**Languages**
+English: Native
+German: A2/B1 Level
+**IT**
+OS: Linux (primary), OSX, Windows
+Knowledge of Office suites (Microsoft Office, LibreOffice, Google Drive)
+Programming: Bash, R, Python
+Collaborative tools: Google Drive, Slack, Owncloud, Dropbox
+**Molecular Biology**
+Experience of ancient DNA clean room procedures
+Use of standard genetics laboratory equipment (centrifuge, PCR cyclers etc.)
+DNA extraction, PCR, NGS library preparation, agarose gel
 
 Publications
 ======
