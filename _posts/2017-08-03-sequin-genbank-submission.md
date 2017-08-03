@@ -1,6 +1,6 @@
 ---
 title: "Sequin Submission to Genbank Tutorial"
-date: 2017-07-03
+date: 2017-08-03
 permalink: /posts/2017/08/sequin-genbank-submission.md/
 tags:
   - bioinformatics
@@ -38,7 +38,7 @@ reconstructed mtGenomes.
 ```
 For the reference sequence you should also add the tag `[acc=NC_007596.2]`.
 # Using Sequin
-5. Next we can start `Sequin`, select 'NCBI GenBank' and 'Start new submission'. ![Load Sequin](https://github.com/jfy133/jfy133.github.io/tree/master/images/2018-08-sequin-genbank-submission/1-load_sequin.png)
+5. Next we can start `Sequin`, select 'NCBI GenBank' and 'Start new submission'. ![Load Sequin](images/2017-08-sequin-genbank-submission/1-load_sequin.png)
 6. Set the release date of the data (for example if you want to release on the same day as your paper is published - note you can update this later) and add a tentative title for the study. ![Submission Information](/images/2018-08-sequin-genbank-submission/2-submission_info_1.png)
 7. Set you name, phone and email (fax can be skipped). ![Submission Information](/images/2018-08-sequin-genbank-submission/3-submission_info_2.png)
 8. Enter the names of the authors of the study. ![Submission Information](/images/2018-08-sequin-genbank-submission/4-submission_info_3.png)
