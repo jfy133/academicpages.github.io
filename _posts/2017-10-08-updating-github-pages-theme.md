@@ -29,42 +29,34 @@ tutorial I am focusing on updating a Github pages theme.
 # Instructions
 
  1. Change into my local repository on my laptop, and initialise
-   ```
-   cd ~/<path>/<to>/<local_repo/
-   git init
-   ```
- 2. Check the remote information, and if no upstream branches present - add them. In this case I'm using the repo I used for my website.
-   ```
-   git remote -v
-
-   ## if no 'upstream' branches
-   git remote add upstream https://github.com/academicpages/academicpages.github.io.git
-   ```
-
+  ```
+  cd ~/<path>/<to>/<local_repo/
+  git init
+  ```
+ 2. Check the remote information, and if no upstream branches present - add them. In this case I'm using the repo I used for my website
+  ```
+  git remote -v
+  git remote add upstream https://github.com/academicpages/academicpages.github.io.git
+  ```
  3. Find the changes in the upstream branch
-   ```
-   git fetch upstream
-   ```
-
+  ```
+  git fetch upstream
+  ```
  4. Now check out of branch (not sure if this was needed, but didn't do any harm)
   ```
   git checkout master
   ```
-
  5. Now we attempt to merge the changes. Git will take anything in the upstream branch, and if no change has been made on the my personal repo in the past, will make the change. Otherwise, `merge conflict` errors will be printed to screen.
   ```
   git merge upstream/master
   ```
-
  6. Take a look at which files have the merge conflicts, and inside each file look at the sections with `<<<<<`, `=====` or `>>>>>` and manually remove the changes (normally the upstream, or one below the `=====`) that you don't want changed. Remove the symbols above as well, save the the file. Add the file to the commit to indicate you've 'fixed'
  the merge conflict, for example:
   ```
   git add _config.yml
   ```
-
  7. Once you've fixed all the merge conflicts, you can do a normal git commit and push.
   ```
   git commit -m "Merged with <upstream_repo>"
   ```
-
 And with that your website theme should be updated.
