@@ -39,21 +39,21 @@ tutorial I am focusing on updating a Github pages theme.
 
    ## if no 'upstream' branches
    git remote add upstream https://github.com/academicpages/academicpages.github.io.git
-
    ```
+
  3. Find the changes in the upstream branch
    ```
    git fetch upstream
    ```
  4. Now check out of branch (not sure if this was needed, but didn't do any harm)
-  ````
+  ```
   git checkout master
   ```
  5. Now we attempt to merge the changes. Git will take anything in the upstream branch, and if no change has been made on the my personal repo in the past, will make the change. Otherwise, `merge conflict` errors will be printed to screen.
   ```
   git merge upstream/master
   ```
- 6. Take a look at which files have the merge conflicts, and inside each file look at the sections with `<<<<<`, `=====` or `>>>>>` and manually remove the changes (normally the upstream, or one below the ====) that you don't want changed. Remove the symbols above as well, save the the file. Add the file to the commit to indicate you've 'fixed'
+ 6. Take a look at which files have the merge conflicts, and inside each file look at the sections with `<<<<<`, `=====` or `>>>>>` and manually remove the changes (normally the upstream, or one below the `====`) that you don't want changed. Remove the symbols above as well, save the the file. Add the file to the commit to indicate you've 'fixed'
  the merge conflict, for example:
   ```
   git add _config.yml
