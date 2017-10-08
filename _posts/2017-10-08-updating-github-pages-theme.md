@@ -19,9 +19,9 @@ This wasn't as straightforward as it seemed, so here I have written down
 my instructions how to apply the fixes in the future.
 
 The instructions are essentially a merging of what I read on these three pages:
- * [https://help.github.com/articles/fork-a-repo/]
- * [https://help.github.com/articles/syncing-a-fork/]
- * [http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git]
+ * [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
+ * [https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)
+ * [http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git](http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git)
 
 I assume this is applicable for all Git related repo manipulations, but in this
 tutorial I am focusing on updating a Github pages theme.
