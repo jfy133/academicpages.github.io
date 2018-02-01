@@ -1,7 +1,7 @@
 ---
 title: "BareBonesBash"
 collection: teaching
-type: "tutorial"
+type: "Tutorial"
 permalink: /teaching/2018-tutorial-1
 venue: "Max Planck Institute for the Science of Human History, Department of Archaeogenetics"
 date: 2018-01-20
