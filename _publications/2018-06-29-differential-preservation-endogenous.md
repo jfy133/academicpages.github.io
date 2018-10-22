@@ -6,7 +6,7 @@ excerpt: ''
 date: 2018-06-29
 venue: 'Scientific Reports'
 paperurl: 'https://doi.org/10.1038/s41598-018-28091-9'
-citation: 'Warriner, C; Herbig, A; Mann, A; Fellows Yates, J.A.; Weiß, C.L.; Burbano, H.A.; Orlando, L; Krause, J (2017). &quot;A Robust Framework for Microbial Archaeology&quot; <i>Annu. Rev. Genom. Hum. Genet. 2017</i>. 18:13.1-13.36'
+citation: 'Mann, A.E.; Sabin, S; Ziesemer, K; Vågene, Å.J.; Schroeder, H; Ozga, A.T.; Sankaranarayanan, K; Hofman, C.A.; Fellows Yates, J.A.; Salazar-García, D.C.; Frohlich, B; Aldenderfer, M; Hoogland, M; Read, C; Milner, G.R.; Stone, A.C.; Lewis Jr., C.M; Krause, J; Hofman, C; Bos, K.I.; Warinner, C (2018) &quot;Differential preservation of endogenous human and microbial DNA in dental calculus and dentin&quot; <i> Sci. Rep.<\i> DOI:[https://doi.org/10.1038/s41598-018-28091-9](https://doi.org/10.1038/s41598-018-28091-9) 8(1) 8922(OA)'
 ---
 
 **Abstract**
