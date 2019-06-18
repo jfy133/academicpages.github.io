@@ -10,8 +10,6 @@ tags:
   - tutorial
 ---
 
-# Background
-
 I recently was using the R package [`pvclust`](http://stat.sys.i.kyoto-u.ac.jp/prog/pvclust/) to test the
 'robusticity' of clusters in a microbiome-related clustering analysis.
 

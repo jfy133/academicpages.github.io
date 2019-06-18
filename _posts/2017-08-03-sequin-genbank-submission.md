@@ -7,7 +7,7 @@ tags:
   - ncbi
   - tutorial
 ---
-# Introduction
+
 As I came to the end of my M.Sc. and writing the corresponding journal article,
 one thing I was aware of was that all previous papers on woolly mammoth
 mitchondrial genomes to NCBI's GenBank database. To continue with this

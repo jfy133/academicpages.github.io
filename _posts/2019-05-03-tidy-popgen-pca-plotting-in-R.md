@@ -10,8 +10,6 @@ tags:
   - tutorial
 ---
 
-# Summary
-
 Many people in the human population-genetics groups in my department at MPI-SHH use a propetiary Mac specific program to make their figures of PCAs (principle component analysis). Some of the members of these groups however do not have Macs and were struggling to recreate some of the plots their collegues were making. 
 
 In response, I wrote a markdown document describing how you would recreate a PCA from a [recent paper](https://doi.org/10.1038/s41467-018-07483-5) from my friend [Thiseas Lamnidis](https://github.com/TCLamnidis) but in R.

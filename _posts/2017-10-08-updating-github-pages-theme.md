@@ -9,7 +9,6 @@ tags:
   - theme
   - tutorial
 ---
-# Introduction
 
 I am new to Git and Github, and so I am still very much learning on the fly.
 Today I noticed the original repository for the theme of this website had added
