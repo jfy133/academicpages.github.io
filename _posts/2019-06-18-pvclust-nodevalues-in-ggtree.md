@@ -1,5 +1,5 @@
 ---
-title: "`pvclust` Node Values In ggtree"
+title: "pvclust Node Values In ggtree"
 date: 2019-06-18
 permalink: /posts/2019/06/pvclust-nodevalues-in-ggtree.md/
 tags:
