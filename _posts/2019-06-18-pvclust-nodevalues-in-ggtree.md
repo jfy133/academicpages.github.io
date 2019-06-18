@@ -11,11 +11,7 @@ tags:
 ---
 
 I recently was using the R package [`pvclust`](http://stat.sys.i.kyoto-u.ac.jp/prog/pvclust/) to test the
-'robusticity' of clusters in a microbiome-related clustering analysis.
-
-While `pvclust` provides it's own plots via `plot()`  on a `pvclust` object, this plots the dendrogram in  base R. 
-
-For readability and customisability reasons I prefer using the packages `ggplot2` and `ggtree` for making my figures. However, I was having a hard time to extract the node uncertainty values from the `pvclust` object  and integrate them into a generic R `phylo` object for plotting the dendrogram in ggtree.
+'robusticity' of clusters in a microbiome-related clustering analysis. While `pvclust` provides it's own plots via `plot()`  on a `pvclust` object, this plots the dendrogram in  base R. For readability and customisability reasons I prefer using the packages `ggplot2` and `ggtree` for making my figures. However, I was having a hard time to extract the node uncertainty values from the `pvclust` object  and integrate them into a generic R `phylo` object for plotting the dendrogram in ggtree.
 
 While I knew this was possible, as you can assign bootstrap values to a phylo object using
 
