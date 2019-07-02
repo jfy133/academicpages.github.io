@@ -13,40 +13,14 @@ tags:
 I recently was using the R package [`pvclust`](http://stat.sys.i.kyoto-u.ac.jp/prog/pvclust/) to test the
 'robusticity' of clusters in a microbiome-related clustering analysis. While `pvclust` provides it's own plots via `plot()`  on a `pvclust` object, this plots the dendrogram in  base R. For readability and customisability reasons I prefer using the packages `ggplot2` and `ggtree` for making my figures. However, I was having a hard time to extract the node uncertainty values from the `pvclust` object  and integrate them into a generic R `phylo` object for plotting the dendrogram in ggtree.
 
-While I knew this was possible, as you can assign bootstrap values to a phylo object using
-
-```r
-tre$node.label <- boots
-```
-
-(assuming the bootstrap values in the `boots` vector are the same order of the coresponding nodes in the `phylo` object).
-
-and then running in ggtree as follows
-
-```r
-final_tree <- ggtree(tre) +
-    geom_label2(aes(subset = !isTip, label = label))
-
-final_tree
-```
-
-I could not for the life of me work out how `pvclust` was able to plot the AU values as stored in the `my_pvclust_object$edges` entry of the `pvclust` object
-
-After hunting through the `pvclust` [source code](https://github.com/cran/pvclust), I identified that the plotting system of the AU/BP values on the dendrogram with `plot()`, was by doing some clever but [funky calculations](https://github.com/cran/pvclust/blob/fefb8711aaf44b839185144b4ad8a8116fcd1d8c/R/pvclust-internal.R#L174) based 
-on the X- and Y-coordinates of the plot and overlaying this on the tree - i.e. _not_ by the associated nodes. 
-
-This didn't help me immediately, as unfortunately the code in the function that did these calculations was not well commented and was with uninformative variable names (my kingdom for well-commented code!). Instead, I looked into how `phylo` objects actually translate the information, when they have associated bootstrap values.
-
-This lead me into looking into the [`as.phylo.hclust`](https://github.com/cran/ape/blob/master/R/as.phylo.R) intenral function from the package [`ape`](http://ape-package.ird.fr/), which gave me a bit more a hint. It was looping through each row of the `merge` list entry of the `hclust` object, which defines at which height each node agglomerates. Unfortunately, while I was on the right track - I still found the code quite opaque.
-
-Fortunately, a bit more googling showed me someone else had already solved the problem of transferring additional `hclust` information into a `phylo` object but in a different context. The `fastbap` package has the function [`as.phylo.hclust.node.attributes()`](https://github.com/gtonkinhill/fastbaps/blob/master/R/as.phylo.hclust.node.attributes.R)` which essentially does what I needed to do - i.e. when calculating the node numbers from each merge event, also store with the same node number the corresponding attribute, or in this case, `pvclust` AU value.
+Fortunately, a bit of googling (a couple of days...) showed me someone else had already solved the problem of transferring additional `hclust` information into a `phylo` object but in a different context. The `fastbap` package has the function [`as.phylo.hclust.node.attributes()`](https://github.com/gtonkinhill/fastbaps/blob/master/R/as.phylo.hclust.node.attributes.R)` which essentially does what I needed to do - i.e. when calculating the node numbers from each merge event, also store with the same node number the corresponding attribute, or in this case, `pvclust` AU value.
 
 I then modified this function slightly to make it more consistent with how `pvclust` will display the values in the base R plot (rounding and converting to a 'percentage'). Note that this outputs in the `phylo` object the metadata `node.label`, not as `node.attributes` as in the original `fastbaps` function.
 
 So in summary:
 
 ```r
-## 1. Make pvclust object
+## 1. Make pvclust object e.g.
 hclust_boot <- pvclust::pvclust(otu_matrix,
                  method.hclust = selected_method,
                  method.dist = "euclidean",
