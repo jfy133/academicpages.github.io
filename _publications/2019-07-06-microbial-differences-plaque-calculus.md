@@ -6,7 +6,7 @@ excerpt: ''
 date: 2019-07-06
 venue: 'Microbiome'
 paperurl: 'https://doi.org/10.1186/s40168-019-0717-3'
-citation: 'Velsko, I.M.; Fellows Yates, J.A.; Aron, F.; Hagan, R.W.; Frantz, L.A. F; Loe, L.; Martinez, J.B.R.; Chaves, E.; Gosden, C.; Larson, G.; Warinner, C. (2019) &quot;Microbial differences between dental plaque and historic dental calculus are related to oral biofilm maturation stage&quot; Microbiome 7(1) 102(OA)'
+citation: 'Velsko, I.M.; Fellows Yates, J.A.; Aron, F.; Hagan, R.W.; Frantz, L.A. F; Loe, L.; Martinez, J.B.R.; Chaves, E.; Gosden, C.; Larson, G.; Warinner, C. (2019) &quot;Microbial differences between dental plaque and historic dental calculus are related to oral biofilm maturation stage&quot; Microbiome 7(1) 102 (OPEN ACCESS)'
 ---
 
 This paper is Open Access!

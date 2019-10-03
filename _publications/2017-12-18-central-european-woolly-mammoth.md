@@ -6,7 +6,7 @@ excerpt: ''
 date: 2017-12-18
 venue: 'Scientific Reports'
 paperurl: 'https://doi.org/10.1038/s41598-017-17723-1'
-citation: 'Fellows Yates, J.A.; Drucker, D.G.; Reiter, E;, Heumos, S; Welker, F; Münzel, S.C.; Wojtal, P; Lázničková-Galetová, M; Conard, N.J; Herbig, A; Bocherens, H; Krause, K (2017). &quot;Central European Woolly Mammoth Population Dynamics: Insights from Late Pleistocene Mitochondrial Genomes&quot; Sci. Rep. 7(1):17714'
+citation: 'Fellows Yates, J.A.; Drucker, D.G.; Reiter, E;, Heumos, S; Welker, F; Münzel, S.C.; Wojtal, P; Lázničková-Galetová, M; Conard, N.J; Herbig, A; Bocherens, H; Krause, K (2017). &quot;Central European Woolly Mammoth Population Dynamics: Insights from Late Pleistocene Mitochondrial Genomes&quot; Sci. Rep. 7(1):17714 (OPEN ACCESS)'
 ---
 
 This paper is Open Access!
