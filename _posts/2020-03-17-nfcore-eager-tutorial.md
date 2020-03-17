@@ -1,5 +1,5 @@
 ---
-title: "Gentle introduction to nf-ore/eager"
+title: "Gentle introduction to nf-core/eager"
 date: 2020-03-17
 permalink: /posts/2020/03/nf-core-eager-tutorial.md/
 tags:
@@ -18,3 +18,5 @@ screening analysis.
 You can see this here
 
 [Intro to nf-core/eager](https://jfy133.github.io/files/presentations/intro-to-nfcore-eager.html ':include :type=iframe width=100% height=600px')
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="300" height="300" src="https://jfy133.github.io/files/presentations/intro-to-nfcore-eager.html"></iframe>
