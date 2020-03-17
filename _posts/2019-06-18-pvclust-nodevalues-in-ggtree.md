@@ -3,11 +3,10 @@ title: "pvclust Node Values In ggtree"
 date: 2019-06-18
 permalink: /posts/2019/06/pvclust-nodevalues-in-ggtree.md/
 tags:
-  - website
-  - github
-  - jekyll
-  - theme
-  - tutorial
+  - bioinformatics
+  - ggtree
+  - pvclust
+  - bootstrap_values
 ---
 
 I recently was using the R package [`pvclust`](http://stat.sys.i.kyoto-u.ac.jp/prog/pvclust/) to test the
