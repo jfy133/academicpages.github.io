@@ -167,19 +167,18 @@ James A. Fellows Yates
  
 # What is [nf-core/eager](https://github.com/nf-core/eager)?
 
-* The next generation of the **E**fficient **A**ncient **GE**nome **R**econstruction pipeline ([Peltzer et al. 2016](https://dx.doi.org/10.1186/s13059-016-0918-z))
+* The next generation of the **E**fficient **A**ncient **GE**nome **R**econstruction pipeline (v1: [Peltzer et al. 2016](https://dx.doi.org/10.1186/s13059-016-0918-z))
 
-* What?
+* **What** does it do?
   * Required basic processing tasks of NGS data (e.g. sequence  adapter clipping, mapping)
-  * Performs standard ancient DNA analyses (e.g. metagenomic screening, nuclear DNA contamination, SNP table generation)
-  * All configured specifically for ancient DNA (relaxed parameters, damage patterns etc.) 
+  * Performs standard ancient DNA analyses (e.g. metagenomic screening, nuclear DNA contamination estimation etc.)
+  * All configured specifically for ancient DNA (damage accounted parameters, damage patterns etc.) 
 
-* Why?
+* **Why** use it over other pipelines?
   * Easily maintainable and extendible
   * High portable (can run from laptops to HPC clusters)
   * Highly reproducible (comes with all the required software all set up for you)
   * High quality software development guidelines ensures stability and robustness (thanks [nf-core](https://nf-co.re)!) 
-
 
 ---
 
@@ -194,6 +193,8 @@ This tutorial provides step by step instructions on how to:
 4. How to optimise for your computing infrastructure
 5. Run on your own data
 
+> This tutorial is for trying out the pipeline only, it is not necessarily recommended for 'production' use! See the end of the presentation for more information.
+
 ---
 
 class: middle
@@ -204,7 +205,7 @@ class: middle
 
 # Before we start
 
-This walk-through assumes you are working on a linux based computer or server, with [`python`](https://www.python.org/) and [`java`](https://openjdk.java.net/) installed, and are familiar with a terminal.
+This walk-through assumes you are working on a unix based computer or server, with [`python`](https://www.python.org/) and [`java`](https://openjdk.java.net/) installed, and are familiar with a terminal (**open one now!**).
 
 Python and Java are very common tools that are normally already installed on a PC or server. 
 
@@ -230,8 +231,6 @@ The exact version doesn't matter, but if you get no output, please contact your 
 
 # What will I need?
 
-You yourself will only need to install **two** thing to run the pipeline (the pipeline does the rest!)
-
 Firstly lets make a directory to run our tests.
 
 ```bash
@@ -239,9 +238,11 @@ $ mkdir nfcore-eager_test
 $ cd nfcore-eager_test
 ```
 
-> This directory must be in a location that has at least ~3GB of space
+> This directory must be in a location that has at least ~3GB of space!
 
-Now we will run the steps for installing our two requirements: 
+We ourselves will only need to install **two** additional things to run the pipeline (the pipeline does the rest!)
+
+These two requirements are:
 
 .center[
 [<img src="https://docs.conda.io/en/latest/_images/conda_logo.svg" width="30%" hspace="50" />](https://conda.io/) and [<img src="https://www.nextflow.io/img/nextflow2014_no-bg.png" width="30%" hspace="50"/>](https://www.nextflow.io/)
@@ -251,9 +252,9 @@ Now we will run the steps for installing our two requirements:
 
 # What will I need?
 
-First check if you've already got either of these two already installed.
+Lets first check if you've already got either of these two already installed.
 
-As before run the following commands and see if you get a version printed to screen
+As before, run the following commands and see if you get a version printed to screen
 
 ```bash
 $ conda --version
@@ -273,7 +274,7 @@ $ nextflow -version
 
 > ⚠️ You need to have nextflow at a minimum version of `19.10.0` to run nf-core/eager
 
-**If you get versions reported**, please skip to the [basic example](#basic-example)
+**If you get versions reported as above**, please skip to [Getting nf-core/eager](#getting-nf-core-eager)
 
 **If you get no versions reported for one or both**, please go to the next slide!
 
@@ -281,15 +282,15 @@ $ nextflow -version
 
 # Installing [<img src="https://docs.conda.io/en/latest/_images/conda_logo.svg" width="20%" />](https://conda.io/)
 
-Next, lets install `conda` which will be our software and environment manager (for this tutorial\*):
+Next, lets install `conda` which will be our software and environment manager (for this tutorial\*). This means it will:
 
-* Downloads and installs all the tools used in the pipeline in an [enviroment](https://en.wikipedia.org/wiki/Conda_(package_manager))
-* Ensures everyone using the pipeline have the same versions for reproducibility 
+* Download and installs all the tools used in the pipeline in an [enviroment](https://en.wikipedia.org/wiki/Conda_(package_manager))
+* Ensure everyone using the pipeline have the same versions for reproducibility 
 
 
-To download the installer, and run it
+To download the `conda` installer, and run it:
 
-> You may need to change the [link](https://docs.conda.io/en/latest/miniconda.html#linux-installers) depending on your setup
+> ⚠️ You may need to change the [link](https://docs.conda.io/en/latest/miniconda.html#linux-installers) depending on your setup, e.g. 32-bit operating systems
 
 ```bash
 $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
@@ -297,7 +298,7 @@ $ sh Miniconda3-latest-Linux-x86_64.sh
 
 ```
 
-then follow the instructions in the terminal.
+...then follow the instructions in the terminal.
 
  > \* The use of docker or singularity is preferred as they are more robust and faster to load containers, but requires more involved installation and sysadmin rights. See the [nf-core documentation](https://nf-co.re/usage/installation) for more information
 
@@ -326,7 +327,7 @@ Now we need to install `nextflow`.
 * This is the pipeline framework which links all the tools together for you
 * When using a job scheduler on a server, it will also do the submissions for you
 
-To download and install
+To download and install nextflow
 
 ```bash
 $ curl -s https://get.nextflow.io | bash
@@ -340,15 +341,41 @@ $ ls
 nextflow
 ```
 
-Finally, we tell to `nextflow` to download nf-core/eager for you 
+To test, run the version command  as above
 
 ```bash
-$ ./nextflow pull nf-core/eager
+./nextflow -version
+
+      N E X T F L O W
+      version 20.01.0 build 5264
+      created 12-02-2020 10:14 UTC (11:14 CEST)
+      <...>
+```
+
+---
+
+name: getting-nf-core-eager
+
+# Getting nf-core/eager
+
+Finally, we just need tell to `nextflow` to download nf-core/eager for you. 
+
+We do this by 'pulling' the pipeline code. This applies for every nextflow pipeline on github.
+
+```bash
+$ ./nextflow pull nf-core/eager -r 2.1.0
 Checking nf-core/eager ...
 done - revision: 26ae7e945f [2.1.0]
 ```
 
-> Don't worry if the version is different!
+We specify the version of nf-core/eager with `-r` (or revision). 
+
+It is _highly_ recommended to include this is in all nf-core/eager commands for reproducibility.
+
+If you download multiple versions of the pipeline, you must always specify which version to use with `-r`.
+
+> The pipeline code will be stored in your home directory, normally in`~/.nextflow/assets/nf-core/eager`. Other people using your cluster will not have access to this, so will also have to run `nextflow pull`. This is also why always running with `-r` is recommended.
+
 
 ---
 
@@ -376,7 +403,7 @@ Our basic example test will do the following:
 9. Run damage pattern analysis
 10. Generate an interactive results report
 
-To run this, use the following command
+To run this example, we run the following simple command:
 
 ```bash
 $ nextflow run nf-core/eager -profile conda,test --paired_end
@@ -406,16 +433,15 @@ Pipeline Name     : nf-core/eager
 Pipeline Version  : 2.1.0
 Run Name          : irreverent_nightingale
 Reads             : data/*{1,2}.fastq.gz
-Fasta Ref         : https://raw.githubusercontent.com/nf-core/test-datasets/eager/reference/Mammoth/Mammoth_MT_Krause.fasta
 ```
 
-Important to note is the 'run name' which is `irreverent_nightingale` in this case. 
+> Important to note for later is the 'run name' which is `irreverent_nightingale` in this case. 
 
 ---
 
 # What is on my screen - status?
 
-Next, you will see progress bars for each step of the pipeline.
+Once the conda environment is made, you will see progress bars for each step of the pipeline.
 
 ```bash
 Config Description: Minimal test dataset to check pipeline function
@@ -430,9 +456,9 @@ executor >  local (26)
 
 ```
 
-Depending on the pipeline step being run, you will have one process for each file (e.g. 1 of 2, right). Each process-sample combination gets a unique 'hash' ID (left).
+Depending on the step being run, you will have one process for each file (e.g. 1 of 2; on the right). Each process-sample combination gets a unique 'hash' ID (left).
 
-Jobs are submitted while specified resources limits are not reached, and jobs not requiring the same files will be submitted in parallel (i.e. not linearly).
+Jobs are submitted while memory/CPUs limits are not reached, and jobs not requiring the same files will be submitted in parallel (i.e. not linearly).
 
 Processes report success or fail. Steps not turned on by the user are shown as `-`. 
 
@@ -450,7 +476,7 @@ Succeeded   : 26
 
 ```
 
-We can now look at our results. If otherwise specified, under `results/`.
+We can now look at our results. If not otherwise specified, under `results/`.
 
 ```bash
 $ cd results/
@@ -478,11 +504,9 @@ class: center
 
 # Pretty pictures!
 
-Here is an example!
+Here is an example (Click <a href="images/multiqc_report.html" target="_blank">here</a>  <a ref=> here </a> for a full page version)
 
 <iframe width="100%" height="50%" frameborder="1" src="images/multiqc_report.html" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
-
-> The window above displayed the output with the 'mobile' version of the report. Click [here](images/multiqc_report.html) for a full page version
 
 Scroll through a bit so you can get a feeling of the types of you see, and
 for more information go to the next slide.
@@ -492,11 +516,11 @@ for more information go to the next slide.
 # What does that all mean?
 
 .left-column[
-If you're unsure how to interpret the plots - particularly in the context of ancient DNA - we provide _extensive_  [documentation](https://nf-co.re/eager/docs/usage) and schematic diagrams to aid interpretation.
+If you're unsure how to interpret the plots - particularly in the context of ancient DNA - we provide _extensive_ documentation and schematic diagrams to aid interpretation.
 
 The documentation covers information such as
 
-  - How to identify potential sequencing or library construction problems?
+  - How to identify potential sequencing problems?
   - How to understand how good a sample was (e.g. on-target DNA content)?
   - How to validate the on-target DNA that I retrieved is actually _ancient_?
 ]
@@ -505,6 +529,7 @@ The documentation covers information such as
 <img align="middle" src="images/damageprofiler.png" width="100%"/img>
 ]
 
+The results documentation is output for every run under under `results/Documentation/results_description.html` or can be seen at the <a href="https://nf-co.re/eager/docs/usage" target="_blank">nf-core website</a> 
 
 ---
 
@@ -512,7 +537,7 @@ The documentation covers information such as
 
 To find the final output files for each process for your own downstream processing, you can explore the `results/` directories for each tool.
 
-For example, lets find a deduplicated BAM file that you would want to use e.g. for viewing in IGV.
+For example, lets find a deduplicated BAM file that you would want to use e.g. for viewing in IGV. We can move out of `MultiQC` and into the deduplication directory.
 
 ```bash
 $ cd ../deduplication
@@ -530,7 +555,7 @@ JK2782_TGGCCGATCAACGA_L008_R1_001.fastq.gz.tengrand.fq.combined.fq.mapped.dedup.
 JK2782_TGGCCGATCAACGA_L008_R1_001.fastq.gz.tengrand.fq.combined.fq.mapped.hist        JK2782_TGGCCGATCAACGA_L008_R1_001.fastq.gz.tengrand.fq.combined.fq.mapped_rmdup.bam.csi
 ```
 
-The `.json`, and `.hist` files contain summary stats from `dedup`; the corresponding deduplicated BAM (`_rmdup.bam`) comes with a BAM index (`_rmdup.bam.csi`)
+The `.json`, and `.hist` files contain summary stats from `dedup`; each  deduplicated BAM (`_rmdup.bam`) comes with a BAM index (`_rmdup.bam.csi`)
 
 > Not sure where to find what you're looking for? Check the [documentation](https://nf-co.re/eager/docs/usage)
 
@@ -544,15 +569,46 @@ Once you're happy with the results, you simply clean up all intermediate files w
 $ nextflow clean -f -k
 ``` 
 
-**_but wait, what do you mean by clean up?_**
+**_but wait, what do you mean by clean up_?** 
 
-Nextflow retains all intermediate files in case something goes wrong. It keeps track of when a process fails and allows you to re-run the pipeline again, but without haveing to re-run the successful processes. This can be done by running the same `nextflow run` command, but with the `-resume` flag.
+<br>
+
+**⚠️ This is important! Please read the next slide**
+
+---
+
+# Clean up - explanation
+
+Nextflow retains all intermediate files in case something goes wrong. It keeps track of when a process fails and allows you to re-run the pipeline again, but without having to re-run the successful processes. 
+
+This can be done by running the same `nextflow run` command, but with the `-resume` flag.
 
 If encounter an error, nextflow will typically report the error from the process and tell you in which 'working' directory the error occurred where you can investigate. 
 
-These directories are named with the 'hashes' that are displayed in the status information when the pipeline is running and are stored in `work/` (but can be specified elsewhere, by using the `-w` flag when running `nextflow run`)
+These directories are named with the 'hashes' that are displayed in the status information when the pipeline is running and are stored in `work/` (but can be specified elsewhere, by using the `-w` flag when running `nextflow run`). 
 
-Once everything runs successfully, the intermediate files can be removed. See later slides describing how to set the cleanup command to run automagically. 
+e.g.
+
+```bash
+work/58/d811f666d1a1a6143fb5bfcc368227/
+```
+
+You can configure nextflow to run **automagically** when a run completes successfully. Please see [later slides](#profiles) for instructions on how to set this up.
+
+---
+
+# Progress
+
+So far we have covered the basic structure of a nextflow run.
+
+1. How to get the pipeline code (and how to get a specific version)
+2. How to run a basic run command
+3. What you see while the run is running
+4. Where to find the results
+
+**If you would like to learn how to optimise the pipeline** for a server/cluster see the next slide.
+
+**If you would like to try a real nf-core/eager run with your own data**, go [here](#real-life-test)
 
 ---
 
@@ -567,7 +623,7 @@ Neither are ideal when you want to keep everything in a central place, so you do
 
 For number 1 - the best solution is to place the nextflow binary in a common folder e.g. `~/bin/` which you add to your bash [`$PATH`](https://unix.stackexchange.com/a/26059) variable.  
 
-In contrast, for number 2, the best way to deal this is with nextflow [_profiles_](https://www.nextflow.io/docs/latest/config.html#config-profiles). These take a little more time to setup, but are worth in the long run. See the next section for more information. 
+In contrast, for number 2, the best way to deal this is with nextflow [_profiles_](https://www.nextflow.io/docs/latest/config.html#config-profiles). These take a little more time to setup, but are worth in the long run. See the next slide for more information. 
 
 ---
 
@@ -732,12 +788,12 @@ Importantly, for paired-end data you must use wildcards and expansions to group 
 
 ```bash
 $ nextflow run nf-core/eager \
-> -profile my_profile \
+> -profile conda \
 > --paired-end \
 > --reads 'testdata/Mammoth/fastq/*_{R1,R2}_*.fq.gz'
 ```
 
-whereby `{R1,R2}` indicates all files that have the same name, other than R1 and R2, should be considered one library.
+whereby `{R1,R2}` indicates all files that have the same name, other than R1 and R2, should be considered one set of sequencing files of a sequencing lane of a sample.
 
 ---
 
@@ -757,9 +813,9 @@ $ nextflow run nf-core/eager \
 
 Observe that there are three types of options:
  
-- **boolean** (i.e. true/false), i.e. options you can turn on and off by just giving the flag, such as `--paired-end`
-- **string** these are typically used for file paths (e.g. `--reads`) or parameters with multiple options. These should be wrapped in quotes!
-- **integer** these are number values. These do not need to be in quotes.
+- **boolean:** (i.e. true/false), i.e. options you can turn on and off by just giving the flag, such as `--paired-end`
+- **string:** these are typically used for file paths (e.g. `--reads`) or parameters with multiple options. These should be wrapped in quotes!
+- **integer:** these are number values. These do not need to be in quotes.
 
 Please see the rest of the [nf-core/eager documentation](https://nf-co.re/eager/docs/usage) for other options.
 
