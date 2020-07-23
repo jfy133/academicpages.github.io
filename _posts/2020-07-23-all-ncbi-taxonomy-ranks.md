@@ -110,4 +110,4 @@ The ones I did find:
 
 * parvorder - comes after order
 * section - comes after genus
-* 'strain', 'morph', 'forma specialis' - comes after species.
+* 'strain', 'morph', 'forma specialis' - comes after species
