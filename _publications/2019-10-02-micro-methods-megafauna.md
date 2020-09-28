@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2019-09-02-micro-methods-megafauna
 excerpt: ''
 date: 2019-10-02
-venue: 'Microbiome'
+venue: 'Bioscience'
 paperurl: 'https://doi.org/10.1093/biosci/biz105'
 citation: 'Swift, J.A; Bunce, M.; Dortch, J.; Douglass, K.; Faith, J.T.; Fellows Yates, J.A; Field, J.; Haberle, S.G; Jacob, E.; Johnson, C. N; Lindsey, E.; Lorenzen, E.D.; Louys, J.; Miller, G.; Mychajliw, A.M.; Slon, V.; Villavicencio, N.A.; Waters, M.R.; Welker, F.; Wood, R.; Petraglia, M.; Boivin, N.; Roberts, P. (2019) &quot;Micro Methods for Megafauna: Novel Approaches to Late Quaternary Extinctions and Their Contributions to Faunal Conservation in the Anthropocene&quot; Bioscience (OPEN ACCESS)'
 ---
