@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2020-11-24-do-i-have-something-in-my-teeth
 excerpt: ''
 date: 2020-11-24
-venue: 'Quaternary International
+venue: 'Quaternary International'
 paperurl: 'https://doi.org/10.1016/j.quaint.2020.11.019'
 citation: 'Mann, A. E., Fellows Yates, J. A., Fagernäs, Z., Austin, R. M., Nelson, E. A., & Hofman, C. A. (2020). Do I have something in my teeth? The trouble with genetic analyses of diet from archaeological dental calculus. Quaternary International. DOI:https://doi.org/10.1016/j.quaint.2020.11.019'
 ---
