@@ -5,7 +5,7 @@ permalink: /publication/2020-09-03-community-curated-and-standardised-metadata-o
 excerpt: ''
 date: 2020-09-03
 venue: 'bioRxiv'
-paperurl: 'https://doi.org/10.1093/biosci/biz105'
+paperurl: 'https://doi.org/10.1101/2020.09.02.279570'
 citation: 'Fellows Yates, J. A., Valtueña, A. A., Vågene, Å. J., Cribdon, B., Velsko, I. M., Borry, M., Bravo-López, M. J., Fernandez-Guerra, A., Green, E. J., Ramachandran, S. L., Heintzman, P. D., Spyrou, M. A., Hübner, A., Gancz, A. S., Hider, J., Allshouse, A. F., & Warinner, C. G. (2020). &quot;Community-curated and standardised metadata of published ancient metagenomic samples with AncientMetagenomeDir&quot;. In bioRxiv (p. 2020.09.02.279570). https://doi.org/10.1101/2020.09.02.279570'
 ---
 
