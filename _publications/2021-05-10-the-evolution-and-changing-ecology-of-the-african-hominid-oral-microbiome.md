@@ -1,7 +1,7 @@
 ---
 title: "The evolution and changing ecology of the Africanhominid oral microbiome"
 collection: publications
-permalink: /publication/2021-05-10-the-evolution-and-changing-ecology-of-the-african-hominid-oral-microbiome.md
+permalink: /publication/2021-05-10-the-evolution-and-changing-ecology-of-the-african-hominid-oral-microbiome
 excerpt: ''
 date: 2021-05-1-0
 venue: 'PNAS'
