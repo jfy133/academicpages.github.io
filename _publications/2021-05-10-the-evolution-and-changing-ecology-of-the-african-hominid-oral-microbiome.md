@@ -1,0 +1,15 @@
+---
+title: "The evolution and changing ecology of the Africanhominid oral microbiome"
+collection: publications
+permalink: /publication/2021-05-10-the-evolution-and-changing-ecology-of-the-african-hominid-oral-microbiome
+excerpt: ''
+date: 2021-05-1-0
+venue: 'PNAS'
+paperurl: 'https://doi.org/10.1073/pnas.2021655118'
+citation: 'Fellows Yates, J. A., Velsko, I. M., Aron, F., Posth, C., Hofman, C. A., Austin, R. M., Parker, C. E., Mann, A. E., Nägele, K., Arthur, K. W., Arthur, J. W., Bauer, C. C., Crevecoeur, I., Cupillard, C., Curtis, M. C., Dalén, L., Bonilla, M. D.-Z., Carlos Díez Fernández-Lomana, J., Drucker, D. G., Escrivá, E. E., Francken, M., Gibbon, V. E., González Morales, M. R., Mateu, A. G., Harvati, K., Henry, A. G., Humphrey, L., Menéndez, M., Mihailović, D., Peresani, M., Moroder, S. R., Roksandic, M., Rougier, H., Sázelová, S., Stock, J. T., Straus, L. G., Svoboda, J., Teßmann, B., Walker, M. J., Power, R. C., Lewis, C. M., Sankaranarayanan, K., Guschanski, K., Wrangham, R. W., Dewhirst, F. E., Salazar-García, D. C., Krause, J., Herbig, A. and Warinner, C. (2021) ‘The evolution and changing ecology of the African hominid oral microbiome’, Proceedings of the National Academy of Sciences of the United States of America. National Academy of Sciences, 118(20). https://doi.org/10.1073/pnas.2021655118.'
+---
+
+This publication is Open Access!
+
+**Abstract**
+The oral microbiome plays key roles in human biology, health, and disease, but little is known about the global diversity, variation, or evolution of this microbial community. To better understand the evolution and changing ecology of the human oral microbiome, we analyzed 124 dental biofilm metagenomes from humans, including Neanderthals and Late Pleistocene to present-day modern humans, chimpanzees, and gorillas, as well as New World howler monkeys for comparison. We find that a core microbiome of primarily biofilm structural taxa has been maintained throughout African hominid evolution, and these microbial groups are also shared with howler monkeys, suggesting that they have been important oral members since before the catarrhine–platyrrhine split ca. 40 Mya. However, community structure and individual microbial phylogenies do not closely reflect host relationships, and the dental biofilms of Homo and chimpanzees are distinguished by major taxonomic and functional differences. Reconstructing oral metagenomes from up to 100 thousand years ago, we show that the microbial profiles of both Neanderthals and modern humans are highly similar, sharing functional adaptations in nutrient metabolism. These include an apparent Homo-specific acquisition of salivary amylase-binding capability by oral streptococci, suggesting microbial coadaptation with host diet. We additionally find evidence of shared genetic diversity in the oral bacteria of Neanderthal and Upper Paleolithic modern humans that is not observed in later modern human populations. Differences in the oral microbiomes of African hominids provide insights into human evolution, the ancestral state of the human microbiome, and atemporal framework for understanding microbial health and disease.

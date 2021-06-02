@@ -13,9 +13,9 @@ An extended PDF copy can be downloaded from **[here](https://docs.google.com/doc
 
 Education
 ======
-**2013** B.S.c. in Bioarchaeology, University of York
-**2015** M.S.c. in Naturwissenschafliches Archäologie, Eberhard-Karls Universiät Tübingen
-**2019/2020** (expected) Ph.D. in Microbiology (Archaeogenetics), Max-Planck-Institute für Menschheitsgeschichte / Friedrich-Schiller-Universität Jena
+- **2013** B.S.c. in Bioarchaeology, University of York
+- **2015** M.S.c. in Naturwissenschafliches Archäologie, Eberhard-Karls Universiät Tübingen
+- **2021** (expected) Ph.D. in Microbiology (Archaeogenetics), Max-Planck-Institute für Menschheitsgeschichte / Friedrich-Schiller-Universität Jena
 
 Work experience
 ======
